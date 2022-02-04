@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Shape</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="700" height="700" ></canvas>
+
+    <script>
+            var canvas = document.getElementById("myCanvas");
+            var context = canvas.getContext("2d");
+            context.lineWidth = 10;
+            context.strokeStyle = "blue";
+            //right arm
+            context.moveTo(300,450);
+            context.lineTo(200,300);
+            context.stroke();
+            //left arm
+            context.moveTo(100,450);
+            context.lineTo(200,300);
+            context.stroke();
+            //right leg
+            context.moveTo(500,950);
+            context.lineTo(198,600);
+            context.stroke();
+            //left leg
+            context.moveTo(00,850);
+            context.lineTo(198,600);
+            context.stroke();
+            //body
+            context.moveTo(200,610);
+            context.lineTo(200,250);
+            context.stroke();
+            //head
+            context.beginPath(0,0);
+            context.arc(200, 180, 70, 0, 2 * Math.PI);
+            context.stroke();
+            //left eye
+            context.beginPath();
+            context.arc(170, 160, 4, 0, 2 * Math.PI);
+            context.stroke();
+            //right eye
+            context.beginPath();
+            context.arc(240, 160, 4, 0, 2 * Math.PI);
+            context.stroke();
+            //smile
+            context.beginPath();
+            context.arc(200, 210, 20, 0, 1 * Math.PI);
+            context.stroke();
+    </script>
+</body>
+
+</html>
